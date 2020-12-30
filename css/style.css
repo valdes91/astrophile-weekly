@@ -1,0 +1,294 @@
+:root {
+  --primary-color: #19d3da;
+  --secondary-color: #686d76;
+  --light-color: #e2e1e1;
+  --dark-color: #373a40;
+  --max-width: 1200px;
+}
+
+.category {
+  --topic1-color: #686d76;
+  --topic2-color: #a66bbe;
+  --topic3-color: #009cff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  background-color: var(--light-color);
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Staatliches', cursive;
+  margin-bottom: 0.55rem;
+  line-height: 1.3;
+}
+
+/* Utility */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.category-topic1 {
+  background: var(--topic1-color);
+}
+
+.category-topic2 {
+  background: var(--topic2-color);
+}
+
+.category-topic3 {
+  background: var(--topic3-color);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-light {
+  background: var(--light-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.btn-hover {
+  opacity: 0.9;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p1 {
+  padding: 1.5rem;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.p3 {
+  padding: 3rem;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+/* Navigation */
+#main-nav {
+  background: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#main-nav h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+#main-nav .container {
+  display: flex;
+  padding: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+}
+
+#main-nav .logo {
+  width: 400px;
+}
+
+.logo #h1-color {
+  color: var(--primary-color);
+}
+#main-nav ul {
+  display: flex;
+  justify-self: end;
+}
+
+#main-nav ul li a {
+  padding: 0.5rem;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#main-nav ul li a.current {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#main-nav ul li a:hover {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+/* Showcase */
+#showcase {
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+  background: url('../img/jamesWebbShowcase.jpg') no-repeat center center/cover;
+}
+
+#showcase::before {
+  background: rgba(51, 51, 51, 0.6);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+  text-align: center;
+  max-width: 75%;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a .bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: #fff;
+}
+
+/* Articles */
+
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.articles-container > *:first-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-column: 1 / span 2;
+  align-items: center;
+}
+
+.articles-container > *:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-column: 2 / span 2;
+  align-items: center;
+}
+
+.main-footer {
+  background: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 1rem;
+  border-radius: 15px 15px 0 0;
+}
+
+.main-footer p {
+  font-size: 0.75rem;
+}
