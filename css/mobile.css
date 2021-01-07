@@ -1,0 +1,33 @@
+.articles-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.articles-container > *:first-child,
+.articles-container > *:last-child {
+  grid-column: 1;
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 600px) {
+  .articles-container {
+    grid-template-columns: 1fr;
+  }
+
+  #main-nav .container {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  #main-nav h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
